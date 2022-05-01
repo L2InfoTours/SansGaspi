@@ -3,6 +3,8 @@ package sans.gaspi.app;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
+import web.SansGapiApplication;
+
 public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
