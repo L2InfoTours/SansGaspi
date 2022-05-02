@@ -36,15 +36,30 @@ public class Home {
 		securityService.autologin(userForm.getUsername(), userForm.getPasswordConfirm());
         return "redirect:/welcome";
     }
+    */
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Model mdl,String error, String logout) {
 		if (error != null)
             mdl.addAttribute("error", "Your username and password is invalid.");
 		if (logout != null)
             mdl.addAttribute("message", "You have been logged out successfully.");
-		return "login";
+		return "login.html";
 	}
-	*/
+	@RequestMapping(value = "/login",method = RequestMethod.POST)
+	  public String submit(Model model, @ModelAttribute("loginBean") User loginBean) {
+	    if (loginBean != null && loginBean.getUsername() != null & loginBean.getPassword() != null) {
+	      if (loginBean.getUsername().equals("chandra") && loginBean.getPassword().equals("chandra123")) {
+	        model.addAttribute("msg", loginBean.getUsername());
+	        return "success";
+	      } else {
+	        model.addAttribute("error", "Invalid Details");
+	        return "login.html";
+	      }
+	    } else {
+	      model.addAttribute("error", "Please enter Details");
+	      return "login.html";
+	    }
+	  }
 	@RequestMapping("/")
 	public String index() {
 		return "index.html";
