@@ -9,6 +9,10 @@ nav ul{
 	min-width: 50vw;
 	max-width:90vw;
 	width:75vh;
+	padding: 0;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%);
 }
 nav ul>li{
 	list-style: none;
