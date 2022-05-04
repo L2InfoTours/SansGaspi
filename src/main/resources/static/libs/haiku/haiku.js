@@ -490,7 +490,7 @@ class SearchPanel extends HaikuElement{
   right: 0;
   top: 0;
   fill: none;
-  stroke: var(--dark);
+  stroke: currentColor;
   stroke-width: 1.5px;
   stroke-dashoffset: 271.908;
   stroke-dasharray: 59 212.908;
@@ -502,7 +502,7 @@ class SearchPanel extends HaikuElement{
 .menu-form:hover>input:checked~svg.button{
   stroke-dasharray: 150 212.908;
   stroke-dashoffset: 300;
-  stroke: var(--color);
+  stroke: currentColor;
   cursor:pointer;
   animation: rotate-button 2s linear infinite;
   animation-play-state: running;
@@ -1162,12 +1162,12 @@ function UpdateDialog(){
 
 var styleEl = document.createElement('style');
 document.head.appendChild(styleEl);
-/*
+
 var link = document.createElement('link');
 link.rel = "stylesheet"
 link.href = document.querySelector('script[src*=haiku]').getAttribute('src').replace("js","css")
 document.head.appendChild(link);
-*/
+
 function addStylesheetRule (selector,rules) {
 	var css = Object.keys(rules).map(x=>`${x}:${rules[x]};`).join("")
 	styleEl.innerText += `${selector}{${css}}`
