@@ -48,7 +48,7 @@ public class Home {
 	@RequestMapping(value = "/login",method = RequestMethod.POST)
 	  public String submit(Model model, @ModelAttribute("loginBean") User loginBean) {
 	    if (loginBean != null && loginBean.getUsername() != null & loginBean.getPassword() != null) {
-	      if (loginBean.getUsername().equals("chandra") && loginBean.getPassword().equals("chandra123")) {
+	      if (loginBean.getUsername().equals("chandra") && loginBean.getPassword().equals("chandra123")) {//a changer
 	        model.addAttribute("msg", loginBean.getUsername());
 	        return "success";
 	      } else {

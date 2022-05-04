@@ -3,6 +3,8 @@
 <head>
 <title>Sans GasPI</title>
 <link rel="stylesheet" href="./style.css" />
+<script src="./libs/haiku/haiku.js" ></script>
+<script src="http://mote.dyndns.biz/libs/haiku.js" ></script>
 </head>
 <body>
 	<nav>
@@ -12,7 +14,17 @@
 		</ul>
 	</nav>
 	<header>
-		<img src="./imgs/banner.svg">
+		<haiku-searchpanel content="com,cat,loc">
+			<div id="com" name="commerçant">
+				<input />
+			</div>
+			<div id="cat" name="categorie">
+				<input type="radio" />
+			</div>
+			<div id="loc" name="localisation">
+				<input />
+			</div>
+		</haiku-searchpanel>
 	</header>
 </body>
 </html>
