@@ -499,7 +499,7 @@ class SearchPanel extends HaikuElement{
   animation-play-state: paused;
   margin: auto;
 }
-.menu-form:hover>input:checked~svg.button{
+.menu-form>input:checked~svg.button{
   stroke-dasharray: 150 212.908;
   stroke-dashoffset: 300;
   stroke: currentColor;
@@ -550,6 +550,7 @@ class SearchPanel extends HaikuElement{
 			this.#main.classList.add('show')
 		}else{
 			this.#main.classList.remove('show')
+			input.checked = false
 		}
 	}
 	add(el){
